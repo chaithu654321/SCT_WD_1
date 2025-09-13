@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canvas Landing Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav.scrolled {
+      background: #333;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav.scrolled .logo {
+      color: white;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #007bff;
+    }
+
+    nav.scrolled .nav-links a {
+      color: white;
+    }
+
+    nav.scrolled .nav-links a:hover {
+      color: #00d8ff;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 100px 40px;
+      margin-top: 80px;
+      min-height: 100vh;
+    }
+
+    /* Home Section with Canvas Logo Background */
+    #home {
+      background: url("your-logo.png") no-repeat center center;
+      background-size: contain;
+      background-color: #f4f4f4;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #home h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    #solutions {
+      background: #e3f2fd;
+    }
+
+    #company {
+      background: #e8f5e9;
+    }
+
+    #contact {
+      background: #fff3e0;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Menu -->
+  <nav id="navbar">
+    <div class="logo">Canvas</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#company">Company</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to Canvas</h1>
+    <p>This is the landing page containing the canvas page content.</p>
+  </section>
+
+  <!-- Solutions Section -->
+  <section id="solutions">
+    <h2>Solutions</h2>
+    <ul>
+      <li>Creative Media</li>
+      <li>Marketing</li>
+      <li>Technology</li>
+      <li>Branding</li>
+    </ul>
+  </section>
+
+  <!-- Company Section -->
+  <section id="company">
+    <h2>Company</h2>
+    <ul>
+      <li>News and Events</li>
+      <li>Blog</li>
+      <li>Work</li>
+      <li>Career</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@canvas.com</p>
+    <p>Phone: +1 (123) 456-7890</p>
+    <p>Address: 123 Canvas Street, Creative City, Country</p>
+  </section>
+
+  <!-- Scroll Script -->
+  <script>
+    // Change nav style on scroll
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
+</html>
